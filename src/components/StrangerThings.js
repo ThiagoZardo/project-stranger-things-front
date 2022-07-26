@@ -9,6 +9,7 @@ const getRealityClass = (hereIsTheUpsideDownWorld) => (
 );
 
 const timeOut = 3000;
+const production = process.env.REACT_APP_PRODUCTION === 'true';
 
 const strangerThingsConfig = {
   url: process.env.REACT_APP_HAWKINS_URL || 'http://localhost:3002',
@@ -33,6 +34,8 @@ class StrangerThings extends React.Component {
       characters: [],
       page: 1,
     };
+
+    console.log(this);
 
     this.handleInput = this.handleInput.bind(this);
     this.changeRealityClick = this.changeRealityClick.bind(this);
@@ -117,6 +120,9 @@ class StrangerThings extends React.Component {
           hereIsTheUpsideDownWorld,
         )}` }
       >
+        {
+          production && <h2>Em desenvolvimento</h2>
+        }
         <div className="content strangerfy">
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
