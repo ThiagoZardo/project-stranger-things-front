@@ -121,9 +121,9 @@ class StrangerThings extends React.Component {
         )}` }
       >
         {
-          production && <h2>Em desenvolvimento</h2>
+          !production && <h2>Em desenvolvimento</h2>
         }
-        <div className="content strangerfy">
+        <div className="content strangerfy">git previousPage
           <div className="change-reality">
             <button type="button" onClick={ this.changeRealityClick }>
               {' '}
