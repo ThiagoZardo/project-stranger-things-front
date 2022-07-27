@@ -35,8 +35,6 @@ class StrangerThings extends React.Component {
       page: 1,
     };
 
-    console.log(this);
-
     this.handleInput = this.handleInput.bind(this);
     this.changeRealityClick = this.changeRealityClick.bind(this);
 
@@ -121,12 +119,11 @@ class StrangerThings extends React.Component {
         )}` }
       >
         <div className="content strangerfy">
-          {
-            !production && <h2>Em desenvolvimento</h2>
-          }
           <div className="change-reality">
+            {
+              !production && <h2>Em desenvolvimento</h2>
+            }
             <button type="button" onClick={ this.changeRealityClick }>
-              {' '}
               Mudar de Realidade
             </button>
           </div>
